@@ -15,7 +15,7 @@ const refs = {
 
 (function () {
     refs.menuList.insertAdjacentHTML('beforeend', createMenu(menu));
-    refs.body.classList.add(localStorage.getItem('Theme') ?? Theme.LIGHT);
+    refs.body.classList.add(localStorage.getItem('Theme') ? localStorage.getItem('Theme'): Theme.LIGHT);
     refs.btnToggle.checked = localStorage.getItem('Theme') === Theme.DARK;
 })();
 
